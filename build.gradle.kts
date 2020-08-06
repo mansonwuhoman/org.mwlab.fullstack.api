@@ -6,6 +6,7 @@ plugins {
     kotlin("jvm") version "1.3.72"
     kotlin("plugin.spring") version "1.3.72"
     kotlin("plugin.jpa") version "1.3.72"
+    war
 }
 
 group = "org.mwlab.fullstack"
@@ -23,6 +24,10 @@ repositories {
 }
 
 dependencies {
+
+    implementation("io.swagger.core.v3:swagger-jaxrs2:2.1.3")
+    implementation("io.swagger.core.v3:swagger-jaxrs2-servlet-initializer-v2:2.1.3")
+
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-jersey")
     implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
